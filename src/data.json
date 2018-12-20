@@ -1,0 +1,33 @@
+{
+    "displayHead":[
+      {
+        "menu":[
+          {
+            "label": "List of Microsoft Services",
+            "url": "./src/assets/images/sprite.png"
+          }
+        ],
+        "leftNav": [
+          {
+            "label": "PowerPoint Online"
+          },
+          {
+            "label": "Megan Brown",
+            "text": "Project Updates"
+          }
+        ],
+        "center":[
+          {
+            "label": "Presentation 1 - Saved"
+          }
+        ],
+        "right": [
+          {
+            "label": "Megan Brown"
+          }
+        ]
+      }
+     
+    ]
+
+}
