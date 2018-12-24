@@ -3,17 +3,20 @@
 import AppButton from '../atoms/AppButton'
 import AppLogo from '../atoms/AppLogo'
 import PrimaryHead from '../molecules/PrimaryHead'
-import HorizontalNav from '../molecules/HorizontalNav'
-
+import ActionHead from '../molecules/ActionHead'
+import ToolBar from '../molecules/ToolBar'
 export default {
   name: 'Header',
   props:{
-    links: Array
+    links: Object
   },
+  
   render (createElement) {
          return <div class="header"> 
-          <div class="header__highlight container-fluid">
-              <PrimaryHead links={this.links} isAnchor={true}/>
+          <div class="header__content">
+              <PrimaryHead links={this.links.displayHead} isAnchor={true}/>
+              <ActionHead links={this.links.actionHead} isAnchor={true}/>
+              <ToolBar links={this.links.toolbar} isAnchor={true}/>
           </div>
          </div>
      },

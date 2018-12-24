@@ -2,18 +2,34 @@
 <template>
   <a
     v-if="isNewWindow"
-    class="app-link"
+    :class="linkName"
     :href="path"
     target="_blank"
   >
     {{ label }}
   </a>
+    <a
+    v-else-if="spanCount"
+    :class="linkName"
+    :href="path"
+  >
+    <span :style = style(url,position,width,height)></span> {{ label }} <span :style = style(url)></span>
+  </a>
+     <a
+    v-else-if="img"
+    :class="linkName"
+     :href="path"
+  >
+    <span  :style = style(url,position,width,height)></span> {{ label }}
+  </a>
   <a
     v-else
-    class="app-link"
+    :class="linkName"
+     :href="path"
   >
     {{ label }}
   </a>
+
 </template>
 
 <script>
@@ -25,10 +41,29 @@ export default {
   props: {
     label: String,
     path: String,
+    linkName: String,
+    img:Boolean,
+    spanCount:Boolean,
+    position:String,
+    url: String,
+    width:String,
+    height: String,
     isNewWindow: {
       type: Boolean,
       default: false
     }
+  },
+  methods:{
+    style(url, position,width,height) {
+       if(position !=undefined && width !=undefined){
+        return 'background: url('+url+')'+position+'; width:'+width +';height:'+height;
+      } else if(position != undefined){
+        return 'background: url('+url+') no-repeat '+position; 
+      } else if(url !=undefined){
+        return 'background: url('+url+') no-repeat';
+      }
+        
+     }
   }
 }
 </script>

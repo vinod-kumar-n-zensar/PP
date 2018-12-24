@@ -4,30 +4,419 @@
         "menu":[
           {
             "label": "List of Microsoft Services",
-            "url": "./src/assets/images/sprite.png"
+            "url": "/images/sprite.png",
+            "imgSpan": false
           }
         ],
         "leftNav": [
           {
-            "label": "PowerPoint Online"
+            "label": "PowerPoint Online",
+            "imgSpan": false
           },
           {
             "label": "Megan Brown",
-            "text": "Project Updates"
+            "imgSpan": false
+          },
+          {
+            "label": "Project Updates",
+            "imgSpan": true
           }
         ],
         "center":[
           {
-            "label": "Presentation 1 - Saved"
+            "label": "Northwind Project Update - Q418 - Saved",
+            "imgSpan": false
           }
         ],
         "right": [
+          {
+            "label": "Simplified Ribbon",
+            "imgSpan": true
+          },
           {
             "label": "Megan Brown"
           }
         ]
       }
      
-    ]
-
+    ],
+    "actionHead":[
+      {
+        "leftNav":[
+          {
+            "label": "File",
+            "imgSpan": false
+          },
+          {
+            "label": "Home",
+            "imgSpan": false
+          },
+          {
+            "label": "insert",
+            "imgSpan": false
+          },
+          {
+            "label": "Design",
+            "imgSpan": false
+          },
+          {
+            "label": "Transitions",
+            "imgSpan": false
+          },
+          {
+            "label": "Animations",
+            "imgSpan": false
+          },
+          {
+            "label": "Review",
+            "imgSpan": false
+          },
+          {
+            "label": "View",
+            "imgSpan": false
+          },
+          {
+            "label": "Edit in PowerPoint",
+            "imgSpan": false
+          },
+          {
+            "label": "Tell me what u want to do",
+            "imgSpan": true
+          }
+        ]
+      },
+      {
+        "right": [
+          {
+            "label": "Share",
+            "imgSpan": true
+          },
+          {
+            "label": "Comments",
+            "imgSpan": true
+          }
+        ]
+      }
+    ],
+    "toolbar":[
+      {
+        "crud":[
+          {
+            "aria": "Undo",
+            "imgSpan": false,
+            "url": "/images/sprite.png",
+            "spanCount":true,
+            "position": "no-repeat -165px -352px"
+          },
+          {
+            "aria": "Copy",
+            "imgSpan": false,
+            "url": "/images/sprite.png",
+            "spanCount":true,
+            "position":"no-repeat -372px -128px"
+          },
+          {
+            "aria": "Format Painter",
+            "imgSpan": true,
+            "url": "/images/sprite.png",
+            "position":"no-repeat -336px -82px",
+            "width": "16px",
+            "height": "14px"
+          },
+          {
+            "aria": "Delete",
+            "imgSpan": true,
+            "url": "/images/sprite.png",
+            "position":"-391px -73px",
+            "width": "16px",
+	          "height": "16px"
+          }
+        ],
+        "slideOps":[
+          {
+            "aria": "New Slide",
+            "label": "New Slide",
+            "imgSpan": true,
+            "url": "/images/sprite.png",
+            "position":"-354px -127px",
+            "width": "15px",
+            "height": "15px"
+          },
+          {
+            "aria": "Layout",
+            "imgSpan": true,
+            "url": "/images/sprite.png",
+            "position":"-329px -227px",
+            "width":"13px",
+            "height":"12px"
+          },
+          {
+            "aria": "Hide Slide",
+            "imgSpan": true,
+            "url": "/images/sprite.png",
+            "position":"-336px -100px",
+            "width":"16px",
+            "height":"14px"
+          }
+        ],
+        "fontOps":[
+          {
+            "aria": "textbox",
+            "imgSpan": false,
+            "textBox": true,
+            "url": "/images/sprite.png"
+          },
+          {
+            "aria": "textbox",
+            "imgSpan": false,
+            "textBox": true,
+            "url": "/images/sprite.png"
+          },
+          {
+            "aria": "Font Increase",
+            "imgSpan": true,
+            "url": "/images/sprite.png",
+            "position":"-311px -371px",
+            "width":"14px",
+            "height":"16px"
+          },
+          {
+            "aria": "Font Decrease",
+            "imgSpan": true,
+            "url": "/images/sprite.png",
+            "position":"-375px -110px",
+            "width":"13px",
+            "height":"15px"
+          },
+          {
+            "aria": "Bold",
+            "imgSpan": true,
+            "url": "/images/sprite.png",
+            "position":"-381px -272px",
+            "width":"10px",
+            "height":"13px"
+          },
+          {
+            "aria": "Italic",
+            "imgSpan": true,
+            "url": "/images/sprite.png",
+            "position":"-201px -384px",
+            "width":"11px",
+            "height":"13px"
+          },
+          {
+            "aria": "Underline",
+            "imgSpan": true,
+            "url": "/images/sprite.png",
+            "position":"-319px -353px",
+            "width":"11px",
+            "height":"14px"
+          },
+          {
+            "aria": "Strike Through",
+            "imgSpan": true,
+            "url": "/images/sprite.png",
+            "position":"-331px -209px",
+            "width":"16px",
+            "height":"11px"
+          },
+          {
+            "aria": "Font Color",
+            "imgSpan": true,
+            "url": "/images/sprite.png",
+            "position":"-237px -349px",
+            "width":"16px",
+            "height":"16px"
+          },
+          {
+            "aria": "Text Highlight Color",
+            "imgSpan": true,
+            "url": "/images/sprite.png",
+            "position":"-363px -379px",
+            "width":"16px",
+            "height":"16px"
+          }
+        ],
+        "listingOps":[
+          {
+            "aria": "Bullets",
+            "imgSpan": true,
+            "spanCount":true,
+            "url": "/images/sprite.png",
+            "position":"-338px -46px",
+            "width":"13px",
+            "height":"13px"
+          },
+          {
+            "aria": "Numbering",
+            "imgSpan": true,
+            "spanCount":true,
+            "url": "/images/sprite.png",
+            "position":"-56px -373px",
+            "width":"14px",
+            "height":"16px"
+          },
+          {
+            "aria": "Align Left",
+            "imgSpan": true,
+            "spanCount":true,
+            "url": "/images/sprite.png",
+            "position":"-164px -372px",
+            "width":"14px",
+            "height":"10px"
+          },
+          {
+            "aria": "Left To Right Text Direction",
+            "imgSpan": true,
+            "url": "/images/sprite.png",
+            "position":"-1px -386px",
+            "width":"16px",
+            "height":"11px"
+          },
+          {
+            "aria": "Right To Left Text Direction",
+            "imgSpan": true,
+            "url": "/images/sprite.png",
+            "position":"-289px -385px",
+            "width":"16px",
+            "height":"11px"
+          },
+          {
+            "aria": "Align Text",
+            "imgSpan": true,
+            "spanCount":true,
+            "url": "/images/sprite.png",
+            "position":"-128px -373px",
+            "width":"14px",
+            "height":"16px"
+          },
+          {
+            "aria": "More",
+            "imgSpan": true,
+            "url": "/images/sprite.png",
+            "label":"..."
+          }
+        ],
+        "shapesOps":[
+          {
+            "aria": "Shapes",
+            "label":"Shapes", 
+            "imgSpan": true,
+            "spanCount":true,
+            "url": "/images/sprite.png",
+            "position":"-380px -254px",
+            "width":"14px",
+            "height":"14px"
+          },
+          {
+            "aria": "Shape Fill",
+            "imgSpan": true,
+            "spanCount":true,
+            "url": "/images/sprite.png",
+            "position":"-145px -355px",
+            "width":"16px",
+            "height":"16px"
+          },
+          {
+            "aria": "Shape Outline",
+            "imgSpan": true,
+            "spanCount":true,
+            "url": "/images/sprite.png",
+            "position":"-55px -355px",
+            "width":"15px",
+            "height":"12px"
+          },
+          {
+            "aria": "Shape Duplicate",
+            "imgSpan": true,
+            "spanCount":true,
+            "url": "/images/sprite.png",
+            "position":"-55px -355px",
+            "width":"15px",
+            "height":"12px"
+          },
+          {
+            "aria": "Arrange",
+            "imgSpan": true,
+            "spanCount":true,
+            "url": "/images/sprite.png",
+            "position":"-357px -325px",
+            "width":"15px",
+            "height":"15px"
+          }
+        ],
+        "searchOps":[
+          {
+            "aria": "Search",
+            "imgSpan": true,
+            "url": "/images/sprite.png",
+            "position":"-396px -3px",
+            "width":"13px",
+            "height":"12px"
+          },
+          {
+            "aria": "Ideas",
+            "label":"Ideas",
+            "imgSpan": true,
+            "url": "/images/sprite.png",
+            "position":"-148px -373px",
+            "width":"10px",
+            "height":"16px",
+            "tooltip":{
+                "content": "Ideas is where you discover intelligent features powered by AI",
+                "link":true,
+                "linklabel": "Click 'Ideas' to begin.",
+                "arrow":"top"
+                }
+            }
+        ]
+      }
+    ],
+  "template":[
+    {
+      "slide1":{
+        "label":"Northwind, Project Update",
+        "text":"click to add subtitle"
+      },
+      "slide2":{
+        "label":"Northwind, Project Update",
+        "text":"click to add subtitle"
+      },
+      "slide3":{
+        "label":"Northwind, Project Update",
+        "text":"click to add subtitle"
+      },
+      "slide4":{
+        "label":"Northwind, Project Update",
+        "text":"click to add subtitle"
+      }
+    }
+  ],
+  "rightNav":{
+    "title":"Ideas (Preview)",
+    "pictures":{
+      "title":"Search for pictures",
+      "recommend":"recommended for you",
+      "images":[
+        {
+          "url":"/images/thumbnail.png"
+        },
+        {
+          "url":"/images/thumbnail.png"
+        },
+        {
+          "url":"/images/thumbnail.png"
+        },
+        {
+          "url":"/images/thumbnail.png"
+        },
+        {
+          "url":"/images/thumbnail.png"
+        },
+        {
+          "url":"/images/thumbnail.png"
+        }
+      ]
+    }
+  }
 }

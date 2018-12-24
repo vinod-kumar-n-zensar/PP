@@ -1,9 +1,11 @@
 <template>
-    <nav>
+    <nav class="header__highlight container-fluid">
       <ul class="left">
-        <li><AppLink :style="style" :aria-labelledby="links[0].menu[0].label"/></li>
+        <li><AppLink :class="'menu'" :style="style(links[0].menu[0].url, '-18px -18px')" :aria-labelledby="links[0].menu[0].label">
+            
+          </AppLink></li>
         <li v-for="link in links[0].leftNav">
-          <AppLink :style="style" :label="link.label" :aria-labelledby="link.label"/>
+          <AppLink :img="link.imgSpan" :style="style" :label="link.label" :aria-labelledby="link.label"/>
         </li>
       </ul>
       <ul class="center">
@@ -12,7 +14,8 @@
           </li>
       </ul>
        <ul class="right">
-          <li  v-for="link in links[0].right"> 
+          <li  v-for="(link,index) in links[0].right">
+            <span v-show="index ==0"></span> 
             {{link.label}}
           </li>
       </ul>
@@ -28,6 +31,11 @@ export default {
     AppLink,
     AppButton
   },
+  data () {
+    return {
+      baseUrl: process.env.BASE_URL
+    }
+  },
   props: {
     links: Array,
     isAnchor:{
@@ -39,11 +47,11 @@ export default {
         default: false
     }
   },
-
-  computed: {
-     style() {
-       return 'background: url("./src/assets/sprite.png")';
+  methods:{
+    style(url, position) {
+       return 'background: url('+url+') no-repeat '+position;
+            
      }
   }
-}
+  }
 </script>

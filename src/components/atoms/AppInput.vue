@@ -12,7 +12,7 @@ export default {
         },
         input_shape: String,
         placeholder: String,
-        textValue: String
+        textValue: String,
     }
 }
 </script>
