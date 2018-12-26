@@ -379,14 +379,78 @@
         "text":"click to add subtitle"
       },
       "slide2":{
-        "label":"Northwind, Project Update",
-        "text":"click to add subtitle"
+        "label":"Lorem Ipsum ",
+        "nav":true,
+        "list":[
+          {
+            "title":"Showcase our sustainable energy"
+          },
+          {
+            "title":"Build on our environmental impact"
+          },
+          {
+            "title":"Connect with our customers"
+          },
+          {
+            "title":"Green branding should be unqiue and creative"
+          },
+          {
+            "title":"Emotional connection to sustainability is key"
+          }
+        ]
       },
       "slide3":{
-        "label":"Northwind, Project Update",
-        "text":"click to add subtitle"
+        "label":"Goals",
+        "nav":true,
+        "list":[
+          {
+            "title":"Showcase our sustainable energy"
+          },
+          {
+            "title":"Build on our environmental impact"
+          },
+          {
+            "title":"Connect with our customers"
+          },
+          {
+            "title":"Green branding should be unqiue and creative"
+          },
+          {
+            "title":"Emotional connection to sustainability is key"
+          }
+        ]
       },
       "slide4":{
+        "label":"Milestones",
+        "nav":true,
+        "list":[
+          {
+            "title":"11/7 - Budget <span>planning.</span>"
+          },
+          {
+            "title":"11/14 - Research <span>phase</span>"
+          },
+          {
+            "title":"12/15 - Content/design concept <span>development</span>"
+          },
+          {
+            "title":"1/3 - Research phase <span>2.</span>"
+          },
+          {
+            "title":"1/25 - Content/design web site <span>creation;</span>"
+          },
+          {
+            "title":"3/12 - Marketing <span>creation;</span>"
+          },
+          {
+            "title":"3/26 - Finalize website design and <span>creation;</span>"
+          },
+          {
+            "title":"4/5 - Research to <span>manufacturing</span>"
+          }
+        ]
+      },
+      "slide5":{
         "label":"Northwind, Project Update",
         "text":"click to add subtitle"
       }
@@ -394,29 +458,271 @@
   ],
   "rightNav":{
     "title":"Ideas (Preview)",
+    "textPlaceholder": "Search Img",
     "pictures":{
       "title":"Search for pictures",
       "recommend":"recommended for you",
       "images":[
         {
-          "url":"/images/thumbnail.png"
+          "url":"/images/northwind.png"
         },
         {
-          "url":"/images/thumbnail.png"
+          "url":"/images/projectupdate.png"
         },
         {
-          "url":"/images/thumbnail.png"
+          "url":"/images/architecture.png"
         },
         {
-          "url":"/images/thumbnail.png"
+          "url":"/images/background.png"
         },
         {
-          "url":"/images/thumbnail.png"
+          "url":"/images/sunset.png"
         },
         {
-          "url":"/images/thumbnail.png"
+          "url":"/images/nature.png"
         }
       ]
+    },
+    "recommendedFiles":{
+      "title":"Recommended Files",
+      "projectUpdates":[
+        {
+          "title": "Northwind Project Updates - Q418",
+          "message": "Some sample text",
+          "url":"/images/pp_icon.jpg"
+        },
+        {
+          "title": "Northwind Project Update",
+          "message": "Some sample text",
+          "url":"/images/pp_icon.jpg"
+        },
+        {
+          "title": "Northwind Project",
+          "message": "Some sample text",
+          "url":"/images/pp_icon.jpg"
+        }
+      ]
+    },
+    "Ideas":{
+      "title":"Search",
+      "url":"/images/EwaEdit_m2.png",
+      "subTitle":"Go to Ideas",
+      "inputPlaceHolder":"Wind Energy",
+      "checkbox":"Creative Commons Only",
+      "choice":[
+        {
+          "title": "Knowledge"
+        },
+        {
+          "title": "Web"
+        },
+        {
+          "title": "Pictures"
+        }
+      ],
+      "imagelink": "/images/IdeasImage.png",
+      "warning":"You are responsible for respecting others rights including copyrigth.",
+      "link": "Learn more here.",
+      "privacyLink":"Privacy statement",
+      "poweredby":"Powered by"
+    },
+    "designer":{
+      "title":"Designer",
+      "url":"/images/EwaEdit_m2.png",
+      "subTitle":"Go to Ideas",
+      "images":[
+        {
+          "url":"/images/design1.png"
+        },
+        {
+          "url":"/images/design2.png"
+        },
+        {
+          "url":"/images/design3.png"
+        },
+        {
+          "url":"/images/design4.png"
+        }
+      ],
+      "goals":[
+        {
+          "url":"/images/goals1.png"
+        },
+        {
+          "url":"/images/goals2.png"
+        },
+        {
+          "url":"/images/goals3.png"
+        },
+        {
+          "url":"/images/goals4.png"
+        }
+      ]
+    },
+    "styleYourSlide":{
+      "title":"Ideas (Preview)",
+      "url":"/images/EwaEdit_m2.png",
+      "inputPlaceHolder":"Search Bing",
+      "slide":{
+        "title":"Style your slide",
+        "more":"More Design Ideas",
+        "images":[
+          {
+            "url":"/images/style1.png"
+          },
+          {
+            "url":"/images/style2.png"
+          },
+          {
+            "url":"/images/style3.png"
+          },
+          {
+            "url":"/images/style4.png"
+          }
+        ]
+      },
+      "picSearch":{
+        "title":"Search for pictures",
+        "power":"Powered by Bing",
+        "images":[
+          {
+            "url":"/images/imagesearch1.png"
+          },
+          {
+            "url":"/images/imagesearch2.png"
+          },
+          {
+            "url":"/images/imagesearch3.png"
+          },
+          {
+            "url":"/images/imagesearch4.png"
+          },
+          {
+            "url":"/images/imagesearch5.png"
+          },
+          {
+            "url":"/images/imagesearch6.png"
+          }
+        ]
+      }
+    },
+    "milestone":{
+      "title":"Ideas (Preview)",
+      "inputPlaceHolder":"Search Bing",
+      "slide":{
+        "title":"Style your slide",
+        "more":"More Design Ideas",
+        "suggestion":"This replacement suggestion is used in 4 of 8 total insatnces on this slide.",
+        "images":[
+          {
+            "url":"/images/milestone.png"
+          },
+          {
+            "url":"/images/milestone2.png"
+          },
+          {
+            "url":"/images/milestone3.png"
+          },
+          {
+            "url":"/images/milestone4.png"
+          }
+        ]
+      },
+      "consistent":{
+        "title":"Check for consistency",
+        "content":[
+          {
+            "title":"[No Punctuation Mark]"
+          },
+          {
+            "title":"[Semicolon]"
+          }
+        ],
+        "more": "1 more",
+        "ignore":"Ignore",
+        "edit":"See in Editor"
+      }
+    },
+    "styleYourSlideMilestone":{
+      "title":"Ideas (Preview)",
+      "url":"/images/EwaEdit_m2.png",
+      "inputPlaceHolder":"Search Bing",
+      "slide":{
+        "title":"Style your slide",
+        "more":"More Design Ideas",
+        "images":[
+          {
+            "url":"/images/m1.png"
+          },
+          {
+            "url":"/images/m2.png"
+          },
+          {
+            "url":"/images/m3.png"
+          },
+          {
+            "url":"/images/m4.png"
+          }
+        ]
+      },
+      "picSearch":{
+        "title":"Search for pictures",
+        "power":"Powered by Bing",
+        "images":[
+          {
+            "url":"/images/imagesearch1.png"
+          },
+          {
+            "url":"/images/imagesearch2.png"
+          },
+          {
+            "url":"/images/imagesearch3.png"
+          },
+          {
+            "url":"/images/imagesearch4.png"
+          },
+          {
+            "url":"/images/imagesearch5.png"
+          },
+          {
+            "url":"/images/imagesearch6.png"
+          }
+        ]
+      }
+    }
+  },
+  "tooltipMain":{
+    "slide1":{
+      "title":"Next, type in the phrase:",
+      "link":"Solar and Wind Energy"
+    },
+    "slide2":{
+      "title":"AI pulls in image suggestions from Bing based on the text in the slide itself",
+      "link":"Lets select this image"
+    },
+    "slide3":{
+      "title":"Now Designer suggests a few layout options to make your slide look great.",
+      "link":"Select your favorite design layout."
+    },
+    "slide4":{
+      "title":"It's recognized the keywords in each bullet point and paired them with icons.",
+      "link":"Let's apply this format now."
+    },
+    "slide5":{
+      "title":"<span class='extra'>Looks great</span> Ideas can also help with text editing.",
+      "link":"Click the next slide to take a look."
+    },
+    "slide6":{
+      "title":"Here punctuation inconsistencies are highlighted.",
+      "link":"Let's fix that now."
+    },
+    "favorite":{
+      "title":"Ideas has recognized this list contains dates. A timeline slide would look nice.",
+      "link":"Choose your favorite."
+    },
+    "presentation":{
+      "title":"<span class='extra'>That Looks much better.</span> You've just made a beautifully designed presentation with built-in intelligence tools. <span class='extra'>Nice job.</span>",
+      "link":"Finish >>"
     }
   }
 }

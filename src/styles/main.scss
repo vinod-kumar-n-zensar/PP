@@ -232,8 +232,31 @@ a{
                 @include margin(top,19px)
             }
         }
+        .presentation--tooltip{
+            border:1px solid red;
+            .tooltip{
+                left: -290px;
+                top: -18px;
+                &__indicator{
+                    display: none;
+                }
+                &__content{
+                    @include text-align(center);
+                    .arrow{
+                        display: none;
+                    }
+                    .extra:last-child{
+                        @include margin(top,20px)
+                    }
+                    p{
+                        @include text-align(left)
+                    }
+                }
+            }
         }
         }
+        }
+        
     }
 }
 
@@ -242,15 +265,18 @@ a{
     @include flexbox
 }
 .slide{
-    @include flexbox;
+        @include flexbox;
         height: 400px;
         @include align-items(center);
         @include justify-content(center);
+        @include flex-wrap(wrap);
     &__main{
+        display: none;
         @include font-family('Segoe UI Regular');
         @include text-align(center);
         width: 100%;
         &__head{
+            @include padding(all,0 74px);
             input{
                 @include text-align(center);
                 width:100%;
@@ -258,19 +284,55 @@ a{
                 border:none;
                 @include font-size(3rem);
                 line-height: unset;
+                @include text-align(left);
+            }
+            &.main{
+                input{
+                    @include text-align(center);
+                }
+                
             }
         }
         &__sub{
+            @include padding(all,0 100px);
+            position: relative;
+            @include margin(all,auto);
             input{
                 @include text-align(center);
                 @include font-size(2rem);
-                @include border(all,1px,dotted,$text--darkgrey);
-                width:100%;
-                height:120px;
+                border:none;
+                
             }
+            .tooltip{
+                top: 12px;
+                &__indicator{
+                    left: 42px;
+                }
+                &__content{
+                    @include margin(left,31px);
+                    .top{
+                        left: 44px;
+                    }
+                }
+            }
+            .list{
+                span{
+                    background: $text-light--orange;
+                }
+                li{
+                    @include font-size(20px);
+                    @include padding(all, 5px 0);
+                    list-style-type: disc;
+                    @include text-align(left)
+                }
+            }
+        }
+        &.active{
+            display: block;
         }
     }
 }
+// Left Navigation 
 .leftNav {
     &__list{
         @include margin(top,20px);
@@ -281,13 +343,42 @@ a{
            @include flexbox;
            @include padding(all,0);
             &--content{
-                @include flexbox;
+                position: relative;
                 @include border(all, 1px, solid, $text--border--grey);
                 min-height: 100px;
-                @include align-items(center);
-                @include justify-content(center);
                 @include font-size(10px);
                 @include margin(bottom,20px);
+                @include padding(all,5px 20px);
+                &.justify{
+                    @include flexbox;
+                    @include align-items(center);
+                    @include justify-content(center);
+                }
+                ul{
+                    line-height: 1.5;
+                    @include padding(left,15px);
+                    li{
+                        font-size: 7px;
+                        list-style-type: disc;
+                    }
+                }
+                .tooltip{
+                    right: -163px;
+                    top: 0;
+                    &__indicator{
+                        top: 15px;
+                    }
+                    &__content{
+                        margin-top: 0;
+                        margin-left: 25px;
+                        .arrow{
+                            top: 19px;
+                        }
+                        button{
+                            @include text-align(left)
+                        }
+                    }
+                }
             }
             &--counter{
                 @include padding(all,0)
@@ -307,6 +398,288 @@ a{
         }
     
 }
+// Right Navigation
+.rightNav{
+    @include padding(right,0);
+    h5{
+        @include font-weight(600)
+    }
+    &__head{
+        @include margin(all,10px 0);
+        @include font-size(15px);
+        p{
+            @include font-size(12px);
+            @include font-weight(600);
+          span{  
+              background: url('/images/sprite.png') no-repeat -148px -373px;
+              width: 10px;
+              height: 16px;
+              @include inline-flex;
+              @include v-align(middle);
+            }
+        }
+    }
+    &__content{
+        &--search{
+            position: relative;
+            input{
+                @include padding(all,3px 20px);
+                width:100%;
+                @include font-size(14px)
+            }
+            &::before{
+                position: absolute;
+                content: "";
+                top: 7px;
+                left: 4px;
+                width: 13px;
+                height: 12px;
+                background: url(/images/sprite.png) no-repeat -396px -3px;
+
+            }
+        }
+        &--picture{
+            position: relative;
+            @include border(all, 1px, solid, $text--border--grey);
+            @include padding(all,6px);
+            @include margin(all,5px 0);
+            h5, p{
+                @include font-size(12px)
+            }
+        }
+        &--thumbnail{
+            @include flexbox;
+            @include flex-wrap(wrap);
+            @include margin(top,5px);
+            > div{
+                height: 50px;
+                @include padding(all,0);
+                background-size: contain !important;
+                img{
+                    height: 97%;
+                    width: 97%;
+                }
+            }
+            .more-link{
+                @include font-size(12px);
+                @include margin(top,5px);
+            }
+            .text-edit{
+                width: 100%;
+                position: relative;
+                height: auto;
+                .note{
+                    position: absolute;
+                    background:$bg-grey;
+                    width: 330px;
+                    right: -21px;
+                    @include padding(all,5px);
+                }
+                .editor-content{
+                    position: relative;
+                    @include margin(top,60px);
+                    p{
+                        position: relative;
+                        
+                        span::before{
+                            content: "\2192";
+                            @include font-size(15px);
+                        }
+                        &::after{
+                            content: "";
+                            background: url(/images/sprite.png) no-repeat -384px -239px;
+                            width: 11px;
+                            height: 7px;
+                            position: absolute;
+                            top: 10px;
+                            right: 0;
+                        }
+                    }
+                    .tooltip{
+                        top: -35px;
+                        left: -179px;
+                        &__indicator{
+                            right: -24px;
+                            top: 41px;
+                        }
+                        &__content{
+                            .arrow{
+                                top: 45px;
+                            }
+                            
+                        }
+                    }
+                }
+                
+            }
+            .action-dual-container{
+                @include flexbox;
+                div{
+                    @include flex(2);
+                    &:last-child{
+                        text-align: right;
+                    }
+                }
+            }
+            .editor-link{
+                @include border(top,1px,solid,$text--border--grey);
+                a{
+                    @include font-size(12px);
+                }
+            }
+            &.fav{
+                .tooltip{
+                    top: 33px;
+                    left: -179px;
+                    &__indicator{
+                        right: -24px;
+                        top: 41px;
+                    }
+                    &__content{
+                        .arrow{
+                            top: 45px;
+                        }
+                        
+                    }
+                }
+            }
+        }
+            &--recomendation{
+                > h5{
+                    @include margin(top, 10px);
+                }
+            }
+            &--recommend{
+                @include flexbox;
+                @include align-items(center);
+                @include margin(all, 10px 0);
+                .img--container{
+                    @include justify-content(center);
+                    img{
+                        width: 14px;
+                        height: 10px;
+                    }
+                }
+                .content--container{
+                    h5{
+                        @include font-size(10px);
+                    }
+                    p{
+                        @include font-size(10px); 
+                    }
+                }
+            }
+            &--choice{
+                span{
+                    @include font-size(10px);
+                    @include margin(right,5px);
+                    &.active{
+                        color: $bg--blue;
+                    }
+                }
+                label{
+                    @include flexbox;
+                    @include font-size(12px);
+                    @include align-items(center);
+                    [type=checkbox]{
+                        @include margin(all,2px 5px 0 0)
+                    }
+                }
+            }
+            &--imgchoice{
+                position: relative;
+                @include margin(top,5px);
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+                p,a{
+                    display: inline;
+                    @include font-size(10px);
+                }
+                a{
+                    color: $bg--blue;
+                }
+                .tooltip{
+                    left: -53px;
+                    top: -47px;
+                    &__indicator{
+                        right: -20px;
+                        top: 55px;
+                    }
+                    &__content{
+                        .arrow{
+                            top: 58px
+                        }
+                    }
+                }
+            }
+            &--doc{
+                @include flexbox;
+                div{
+                    @include flex(2);
+                    .bing-img{
+                        background: url('/images/bing-logo.png');
+                        width: 12px;
+                        height: 12px;
+                        background-size: contain;
+                        @include v-align(sub)
+                    }
+                    a{
+                        color: $bg--blue;
+                    }
+                    &:last-child{
+                        text-align: right;
+                    }
+                }
+                span{
+                    @include inline-flex;
+                }
+                @include font-size(10px);
+            }
+            &--desinger-content, &--goals-content{
+                @include text-align(center);
+                img{
+                    width: 85%;
+                    height: 100%;
+                }
+            }
+            &--desinger-content, &--goals-content{
+                position: relative;
+                .tooltip{
+                    top: -26px;
+                    left: -165px;
+                    &__indicator{
+                        right: -23px;
+                        top: 26px;
+                    }
+                    &__content{
+                        @include margin(top,0);
+                        @include padding(top, 10px);
+                        @include text-align(left);
+                        .arrow{
+                            top: 30px;
+                        }
+                        button{
+                            @include margin(top,20px);
+                            @include text-align(left);
+                        }
+                    }
+                }
+            }
+            &--goals-content{
+                .tooltip{
+                    top: 123px;
+                    left: -150px;
+                    &__indicator{
+                        right: -23px;
+                        top: 24px;
+                    }
+                   
+                }  
+            }
+    }
+}
 // Tooltip
 .tooltip{
     position: absolute;
@@ -316,20 +689,63 @@ a{
         height:15px;
         background: $bg--blue;
         border-radius: 50%;
+        @include inline-flex;
+        position: absolute;
     }
-    .top{
+    .arrow{
         position: absolute;
         display: block;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
         border-bottom: 5px solid $bg--white;
         box-shadow: 0 16px 10px -17px rgba(0, 0, 0, 0.5);
+        @include inline-flex;
+        &.top{
+            top: 17px;
+        }
+        &.right{
+            transform: rotate(90deg);
+            right: -8px;
+        }
+        &.left{
+            transform: rotate(270deg);
+            left: 17px;
+        }
     }
     &__content{
+        @include margin(top,22px);
         background: $bg--white;
         @include font-size(12px);
         box-shadow: rgba(0, 0, 0, 0.3) 0 -4px 30px;
         @include padding(all,5px);
         width: 155px;
+        line-height: 1.5;
+        color: $bg--blue;
+        button{
+            background: transparent;
+            border:none;
+            @include padding(all,0);
+            @include font-weight(600);
+            color: $bg--blue;
+            @include text-align(left)
+        }
+        .extra{
+            @include flexbox;
+            @include margin(bottom,20px)
+        }
+    }
+}
+.overlay{
+    position: absolute;
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2;
+    &.grey{
+        background-color: rgba(181, 179, 179, 0.7);
     }
 }

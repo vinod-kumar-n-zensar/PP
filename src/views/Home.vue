@@ -1,10 +1,10 @@
 <template>
   <div class="home">
-    <Header :links= "AppData" />
+    <Header :links= "AppData" :tooltipData="AppData.tooltipMain"/>
     <div class="container-fluid main-view">
-        <LeftNav class="col-lg-2" :data="AppData.template"/>
-        <TitleView class="col-lg-8"/>
-        <RightNav class="col-lg-2" :data="AppData.rightNav"/>
+        <LeftNav class="col-lg-2" :data="AppData.template" :tooltip="AppData.tooltipMain" />
+        <TitleView class="col-lg-8" :data="AppData.tooltipMain" :templateData="AppData.template"/>
+        <RightNav class="col-lg-2" :data="AppData.rightNav" :tooltip="AppData.tooltipMain"/>
     </div>
    
    

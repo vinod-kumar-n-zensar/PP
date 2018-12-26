@@ -12,9 +12,10 @@ export default {
     render(){
         return <div class="tooltip">
             <span class="tooltip__indicator"></span>
-            <span class={this.arrow}></span>   
-            <div class="tooltip__content">
-                {this.content}
+             
+            <div class="tooltip__content" >
+            <span class={this.arrow+ ' arrow'}></span>  
+                <p domPropsInnerHTML={this.content}>{this.content}</p>
                 <AppButton v-show={this.link} label={this.linkLabel}/>
             </div>
         </div>

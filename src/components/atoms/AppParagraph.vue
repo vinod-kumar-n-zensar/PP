@@ -1,5 +1,10 @@
 <template>
-  <p
+  <p v-if="span"
+    :class="align"
+  >
+    <span>{{spanContent}}</span> {{ content }}
+  </p>
+  <p v-else
     :class="align"
   >
     {{ content }}
@@ -16,8 +21,10 @@ export default {
     content: String,
     align: {
       type: String,
-      default: 'center'
-    }
+      default: 'left'
+    },
+    span: Boolean,
+    spanContent: String
   }
 }
 </script>
