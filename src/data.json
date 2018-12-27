@@ -700,6 +700,10 @@
       "title":"AI pulls in image suggestions from Bing based on the text in the slide itself",
       "link":"Lets select this image"
     },
+    "leftNavSlide2":{
+      "title":"Nice choice.",
+      "link":"Click the next slide to see what else ideas can do."
+    },
     "slide3":{
       "title":"Now Designer suggests a few layout options to make your slide look great.",
       "link":"Select your favorite design layout."
@@ -724,5 +728,68 @@
       "title":"<span class='extra'>That Looks much better.</span> You've just made a beautifully designed presentation with built-in intelligence tools. <span class='extra'>Nice job.</span>",
       "link":"Finish >>"
     }
+  },
+  "footer":{
+    "left":[
+      {
+        "label":"Slide 1 of 2",
+        "imgSpan": false
+      },
+      {
+        "aria":"English (U.S)",
+        "label":"English (U.S)",
+        "imgSpan": false
+      }
+    ],
+    "right":[
+      {
+        "aria":"Give Feedback to Microsoft",
+        "imgSpan": false,
+        "label":"Help Improve Office"
+      },
+      {
+        "aria":"Notes",
+        "label":"Notes",
+        "imgSpan": true,
+        "url":"/images/sprite.png",
+        "position": "no-repeat -218px -386px",
+        "width":"11px",
+        "height":"12px"
+      },
+      {
+        "aria":"Editing View",
+        "imgSpan": true,
+        "url":"/images/sprite.png",
+        "position": "no-repeat -393px -339px",
+        "width":"14px",
+        "height":"13px"
+      },
+      {
+        "aria":"Silde show",
+        "imgSpan": true,
+        "url":"/images/sprite.png",
+        "position": "no-repeat -233px -386px",
+        "width":"13px",
+        "height":"12px"
+      },
+      {
+        "aria":"Zoom Level. Click to open the zoom dialog box.",
+        "label":"69%"
+      },
+      {
+        "aria":"Fit slide to current window.",
+        "imgSpan": true,
+        "url":"/images/pegal.png",
+        "position": "no-repeat -1071px  -127px",
+        "width":"14px",
+        "height":"14px"
+      }
+    ]
+  },
+  "slideImages":{
+    "slide1":"/images/slide1main.png",
+    "mainSlide1":"/images/titleViewMain.png",
+    "slide3":"/images/title3.png",
+    "slide4":"/images/title4.png"
   }
 }

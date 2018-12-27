@@ -1,6 +1,6 @@
 <template>
     <div class="rightNav">
-        <div>
+        <div class="rightNav__main" v-show="state.state.navigation == 'slide1'">
         <div class="rightNav__head">
             <AppHeaderTag :grade="'h5'" :label="data.title"/>
         </div>
@@ -31,7 +31,7 @@
             </div>
     </div>
 </div>
-<div>
+<div class="rightNav__main"  v-show="state.state.navigation == 'windenergy'">
         <div class="rightNav__head">
             <AppHeaderTag :grade="'h5'" :label="data.Ideas.title"/>
             <AppParagraph :span="true" :content="data.Ideas.subTitle"/>
@@ -45,7 +45,7 @@
                 <label for=""> <AppInput :typeText="'checkbox'" checked/>{{data.Ideas.checkbox}} </label>
             </div>
             <div class="rightNav__content--imgchoice">
-                <Tooltip :content="tooltip.slide2.title" :link="true" :linkLabel="tooltip.slide2.link" arrow="right"/>
+                <Tooltip :content="tooltip.slide2.title" :link="true" :linkLabel="tooltip.slide2.link" arrow="right" :setStateNav="fn" :fnVal="'designer'"/>
                 <img :src="data.Ideas.imagelink" alt="">
                 <AppParagraph :content="data.Ideas.warning"/>
                 <AppLink :label="data.Ideas.link" :aria-labelledby="data.Ideas.link"/>
@@ -56,7 +56,7 @@
             </div>
         </div>
         </div>
-        <div>
+        <div class="rightNav__main" v-show="state.state.navigation == 'designer' || state.state.navigation == 'slide2'">
             <div class="rightNav__head">
                 <AppHeaderTag :grade="'h5'" :label="data.designer.title"/>
                 <AppParagraph :span="true" :content="data.designer.subTitle"/>
@@ -64,24 +64,24 @@
              <div class="rightNav__content">
                  
                  <div class="rightNav__content--desinger-content">
-                     <Tooltip :content="tooltip.slide3.title" :link="true" :linkLabel="tooltip.slide3.link" arrow="right"/>
+                     <Tooltip v-show="state.state.navigation == 'designer'" :content="tooltip.slide3.title" :link="true" :linkLabel="tooltip.slide3.link" arrow="right" :setStateNav="fn" :fnVal="'slide2'"/>
                      <img v-for="image in data.designer.images" :src="image.url" alt="">
                 </div>
              </div>
         </div>
-         <div>
+         <div class="rightNav__main" v-show="state.state.navigation == 'keywords'">
             <div class="rightNav__head">
                 <AppHeaderTag :grade="'h5'" :label="data.designer.title"/>
                 <AppParagraph :span="true" :content="data.designer.subTitle"/>
             </div>
              <div class="rightNav__content">
                  <div class="rightNav__content--goals-content">
-                      <Tooltip :content="tooltip.slide4.title" :link="true" :linkLabel="tooltip.slide4.link" arrow="right"/>
+                      <Tooltip :content="tooltip.slide4.title" :link="true" :linkLabel="tooltip.slide4.link" arrow="right" :setStateNav="fn" :fnVal="'slide3'"/>
                      <img v-for="image in data.designer.goals" :src="image.url" alt="">
                 </div>
              </div>
         </div>
-        <div>
+        <div class="rightNav__main" v-show="state.state.navigation == 'slide3' || state.state.navigation == 'finish'">
             
             <div class="rightNav__head">
             <AppHeaderTag :grade="'h5'" :label="data.styleYourSlide.title"/>
@@ -110,7 +110,7 @@
         </div>
         </div>
         </div>
-        <div>
+        <div class="rightNav__main" v-show="state.state.navigation == 'punctuation'">
             
             <div class="rightNav__head">
             <AppHeaderTag :grade="'h5'" :label="data.milestone.title"/>
@@ -137,7 +137,7 @@
                         <AppParagraph :content="data.milestone.slide.suggestion"/>
                     </div>
                     <div class="editor-content">
-                        <Tooltip :content="tooltip.slide6.title" :link="true" :linkLabel="tooltip.slide6.link" arrow="right"/>
+                        <Tooltip :content="tooltip.slide6.title" :link="true" :linkLabel="tooltip.slide6.link" arrow="right" :setStateNav="fn" :fnVal="'timeline'"/>
                         <AppParagraph v-for="(data,key,index) in data.milestone.consistent.content" :span="true" :content="data.title"></AppParagraph>
                     </div> 
                     <div class="action-dual-container">
@@ -156,7 +156,7 @@
         </div>
         </div>
         </div>
-        <div>
+        <div class="rightNav__main"  v-show="state.state.navigation == 'timeline'">
             
             <div class="rightNav__head">
             <AppHeaderTag :grade="'h5'" :label="data.styleYourSlideMilestone.title"/>
@@ -168,7 +168,7 @@
            <div class="rightNav__content--picture">
             <AppHeaderTag :grade="'h5'" :label="data.styleYourSlideMilestone.slide.title"/>
             <div class="rightNav__content--thumbnail fav">
-                <Tooltip :content="tooltip.favorite.title" :link="true" :linkLabel="tooltip.favorite.link" arrow="right"/>
+                <Tooltip :content="tooltip.favorite.title" :link="true" :linkLabel="tooltip.favorite.link" arrow="right" :setStateNav="fn" :fnVal="'finish'"/>
                 <div v-for="(data,key,index) in data.styleYourSlideMilestone.slide.images" class="col-lg-6">
                     <img :src="data.url" alt="">
                 </div>
@@ -201,7 +201,13 @@ export default {
   props:{
     data: Object,
     grade: String,
-    tooltip: Object
+    tooltip: Object,
+    fn: Function
+  },
+  data(){
+    return{
+      state: this.$store
+    }
   },
   components:{
       AppHeaderTag,
@@ -215,6 +221,6 @@ export default {
        return 'background: url('+url+') no-repeat ';
             
      }
-  }
+  },
 }
 </script>

@@ -9,7 +9,7 @@
 
 
 // Header 
-a{
+a,button{
     cursor: pointer;
 }
 .header{
@@ -271,7 +271,6 @@ a{
         @include justify-content(center);
         @include flex-wrap(wrap);
     &__main{
-        display: none;
         @include font-family('Segoe UI Regular');
         @include text-align(center);
         width: 100%;
@@ -292,6 +291,10 @@ a{
                 }
                 
             }
+            img{
+                width: 100%;
+                @include margin(top,100px)
+            }
         }
         &__sub{
             @include padding(all,0 100px);
@@ -301,10 +304,15 @@ a{
                 @include text-align(center);
                 @include font-size(2rem);
                 border:none;
-                
+                &.style{
+                    @include border(all,1px,dotted,$text--grey);
+                    width:100%;
+                    @include padding(all, 0 0 60px)
+                }
             }
             .tooltip{
-                top: 12px;
+                top: 16px;
+                left: 230px;
                 &__indicator{
                     left: 42px;
                 }
@@ -329,6 +337,36 @@ a{
         }
         &.active{
             display: block;
+        }
+    }
+    &.ideas{
+        .slide2,.slide3,.slide4,.slide5{
+            display: none;
+        }
+    }
+    &.slide1, &.windenergy{
+        .slide2,.slide3,.slide4,.slide5{
+            display: none;
+        }
+    }
+    &.designer, &.slide3,&.finish{
+        .slide1,.slide2,.slide4,.slide5,.slide3{
+            display: none;
+        }
+    }
+    &.slide2{
+        .slide1,.slide2,.slide4,.slide5,.slide3{
+            display: none;
+        }
+    }
+    &.keywords{
+        .slide1,.slide2,.slide4,.slide5,{
+            display: none;
+        }
+    }
+    &.punctuation, &.timeline{
+        .slide1,.slide2,.slide3,.slide5,{
+            display: none;
         }
     }
 }
@@ -678,6 +716,44 @@ a{
                    
                 }  
             }
+    }
+}
+
+//Footer 
+.footer{
+    &__toolbar{
+        @include border(top,1px, solid, $text--border--grey);
+        @include flexbox;
+        ul{
+            @include padding(all, 0);
+            li{
+                @include inline-flex;
+                @include padding(all, 0 10px);
+                a{
+                    @include font-size(10px);
+                    text-transform: uppercase;
+                    span{
+                        @include inline-flex;
+                        @include v-align(sub);
+                    }
+                }
+            }
+        &.right{
+            @include text-align(right);
+            li{
+                &:last-child{
+                    @include padding(right, 0);
+                }
+            }
+        }
+        &.left{
+            li{
+                &:first-child{
+                    @include padding(left, 0);
+                }
+            }
+        }
+        }
     }
 }
 // Tooltip
