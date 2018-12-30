@@ -12,6 +12,12 @@
 a,button{
     cursor: pointer;
 }
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
 .header{
     a{
         @include font-family('Segoe UI Regular');
@@ -145,24 +151,26 @@ a,button{
             li{
                 position: relative;
                 a{
-                    @include padding(all,5px 8px);
+                    @include padding(all,5px 4.3px);
                     @include font-size(12px);
                     span:nth-child(2){
-                        background-position: -186px -338px !important;
-                        @include v-align(middle);
-                        width: 11px;
-                        height: 13px;
+                        background: url('/images/EwaEdit_m2.png') no-repeat -255px -380px !important;
+                        width: 12px;
+                        height: 8px;
+                        -webkit-transform: rotate(179deg);
+                        transform: rotate(179deg);
                     }
+                        span:first-child{
+                            @include v-align(middle);
+                        }
                 }
             }
             &.crud{
+
                 li:first-child{
                     span{
-                        width: 11px;
-                        height: 13px;
-                    }
-                    span:last-child{
-                        background-position: -186px -338px !important;
+                        width: 16px;
+                        height: 16px;
                     }
                 }
                 li:nth-child(2){
@@ -262,7 +270,7 @@ a,button{
 
 // Body -- Slide Content
 .main-view{
-    @include flexbox
+    @include flexbox;
 }
 .slide{
         @include flexbox;
@@ -275,7 +283,6 @@ a,button{
         @include text-align(center);
         width: 100%;
         &__head{
-            @include padding(all,0 74px);
             input{
                 @include text-align(center);
                 width:100%;
@@ -284,6 +291,7 @@ a,button{
                 @include font-size(3rem);
                 line-height: unset;
                 @include text-align(left);
+                @include padding(all,0 74px);
             }
             &.main{
                 input{
@@ -360,13 +368,20 @@ a,button{
         }
     }
     &.keywords{
-        .slide1,.slide2,.slide4,.slide5,{
+        .slide1,.slide3,.slide4,.slide5,{
             display: none;
         }
     }
     &.punctuation, &.timeline{
-        .slide1,.slide2,.slide3,.slide5,{
+        .slide1,.slide2,.slide4,.slide5,{
             display: none;
+        }
+    }
+    &.timeline{
+        .list{
+            span{
+                background: transparent;
+            }
         }
     }
 }
@@ -374,7 +389,55 @@ a,button{
 .leftNav {
     &__list{
         @include margin(top,20px);
-        @include padding(all,0)
+        @include padding(all,0);
+        .images{
+            display: none;
+        }
+        &.designer{
+            .images:first-child{
+                display: block
+            }
+        }
+        &.designer,&.slide2,&.slide2,&.keywords,&.slide3,&.punctuation,&.timeline,&.finish{
+            .slide1{
+                .raw-presentation{
+                    display: none;
+                }
+
+            }
+            &.slide2,&.slide2,&.keywords,&.slide3,&.punctuation,&.timeline,&.finish{
+                .images{
+                    display: none;
+                }
+                .slide1{
+                    .images:last-child{
+                        display: block
+                    }
+                 }
+            }
+            &.slide3,&.slide3,&.punctuation,&.timeline,&.finish{
+                
+                .slide2{
+                    .raw-presentation{
+                        display: none;
+                    }
+                    .images:last-child{
+                        display: block
+                    }
+                 }
+            }
+            &.finish{
+                
+                .slide3{
+                    .raw-presentation{
+                        display: none;
+                    }
+                    .images:last-child{
+                        display: block
+                    }
+                 }
+            }
+        }
     }
         
         &__container{
@@ -386,7 +449,7 @@ a,button{
                 min-height: 100px;
                 @include font-size(10px);
                 @include margin(bottom,20px);
-                @include padding(all,5px 20px);
+                @include padding(all,0);
                 &.justify{
                     @include flexbox;
                     @include align-items(center);
@@ -417,6 +480,9 @@ a,button{
                         }
                     }
                 }
+                .raw-presentation{
+                    @include padding(all,0 20px);
+                }
             }
             &--counter{
                 @include padding(all,0)
@@ -433,6 +499,10 @@ a,button{
                     }
                 }
             }
+            img{
+                width:100%,
+            }
+
         }
     
 }
@@ -677,12 +747,6 @@ a,button{
             }
             &--desinger-content, &--goals-content{
                 @include text-align(center);
-                img{
-                    width: 85%;
-                    height: 100%;
-                }
-            }
-            &--desinger-content, &--goals-content{
                 position: relative;
                 .tooltip{
                     top: -26px;
@@ -704,6 +768,15 @@ a,button{
                         }
                     }
                 }
+                img{
+                    width: 85%;
+                    height: 100%;
+                }
+            }
+            &--desinger-content{
+                .image0{
+                    @include border(all,2px,solid,$text-orange);
+                }
             }
             &--goals-content{
                 .tooltip{
@@ -713,7 +786,9 @@ a,button{
                         right: -23px;
                         top: 24px;
                     }
-                   
+                }
+                .image1{
+                    @include border(all,2px,solid,$text-orange);
                 }  
             }
     }
@@ -823,5 +898,87 @@ a,button{
     z-index: 2;
     &.grey{
         background-color: rgba(181, 179, 179, 0.7);
+    }
+}
+
+//STATUS BAR
+.status{
+    position: relative;
+    @include flexbox;
+    &__indicator{
+        background: transparent;
+        border: none;
+        @include font-size(12px);
+        color: $text--blue;
+    }
+    &__outside{
+        cursor: pointer;
+        @include flexbox;
+        @include align-items(center);
+        position: absolute;
+        width: 77%;
+        height: 20px;
+        left: 102px;
+        @include padding(all,0);
+        span{
+            width:10%;
+            @include inline-flex;
+            @include border(right,1px,solid,$text--grey);
+            hr{
+                width:100%;
+            }
+            &:first-child{
+                @include border(left,1px,solid,$text--grey);
+            }
+            &.active{
+                @include border(right,1px,solid,$text--blue);
+                hr{
+                    border-color: $text--blue
+                }
+                &:first-child{
+                    @include border(left,1px,solid,$text--blue);
+                }
+            }
+        }
+    }
+    #outside {
+        height: 20px;
+        background-color: transparent;
+        max-width: 83%;
+        z-index: 1;
+      }
+}
+
+//POPUP
+
+.overlay{
+    position: absolute;
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2;
+    &.grey{
+        background-color: rgba(181, 179, 179, 0.7);
+    }
+}
+.popup{
+    background: rgba(155, 150, 150, 0.85);;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    &__content{
+        background: #fff;
+        height: 90%;
+        width: 87%;
+        margin: 2% auto;
+        overflow-y: auto;
+        box-shadow: 0 0 33px 15px rgba(87, 84, 83, 0.67);
     }
 }

@@ -44,7 +44,7 @@
                 <span v-for="(choice,key,index) in data.Ideas.choice" :class="key == 2 ? 'active':''">{{choice.title}}</span>
                 <label for=""> <AppInput :typeText="'checkbox'" checked/>{{data.Ideas.checkbox}} </label>
             </div>
-            <div class="rightNav__content--imgchoice">
+            <div class="rightNav__content--imgchoice" @click="fn('designer')">
                 <Tooltip :content="tooltip.slide2.title" :link="true" :linkLabel="tooltip.slide2.link" arrow="right" :setStateNav="fn" :fnVal="'designer'"/>
                 <img :src="data.Ideas.imagelink" alt="">
                 <AppParagraph :content="data.Ideas.warning"/>
@@ -65,7 +65,7 @@
                  
                  <div class="rightNav__content--desinger-content">
                      <Tooltip v-show="state.state.navigation == 'designer'" :content="tooltip.slide3.title" :link="true" :linkLabel="tooltip.slide3.link" arrow="right" :setStateNav="fn" :fnVal="'slide2'"/>
-                     <img v-for="image in data.designer.images" :src="image.url" alt="">
+                     <img  v-for="(image,key,index) in data.designer.images" :src="image.url" alt="" @click="fn('slide2')" :class="'image'+key">
                 </div>
              </div>
         </div>
@@ -74,10 +74,10 @@
                 <AppHeaderTag :grade="'h5'" :label="data.designer.title"/>
                 <AppParagraph :span="true" :content="data.designer.subTitle"/>
             </div>
-             <div class="rightNav__content">
+             <div class="rightNav__content" @click="fn('slide3')">
                  <div class="rightNav__content--goals-content">
                       <Tooltip :content="tooltip.slide4.title" :link="true" :linkLabel="tooltip.slide4.link" arrow="right" :setStateNav="fn" :fnVal="'slide3'"/>
-                     <img v-for="image in data.designer.goals" :src="image.url" alt="">
+                     <img v-for="(image,key) in data.designer.goals" :src="image.url" alt="" :class="'image'+key">
                 </div>
              </div>
         </div>
@@ -136,7 +136,7 @@
                     <div class="note">
                         <AppParagraph :content="data.milestone.slide.suggestion"/>
                     </div>
-                    <div class="editor-content">
+                    <div class="editor-content" @click="fn('timeline')">
                         <Tooltip :content="tooltip.slide6.title" :link="true" :linkLabel="tooltip.slide6.link" arrow="right" :setStateNav="fn" :fnVal="'timeline'"/>
                         <AppParagraph v-for="(data,key,index) in data.milestone.consistent.content" :span="true" :content="data.title"></AppParagraph>
                     </div> 
@@ -165,7 +165,7 @@
             <div class="rightNav__content--search">
                 <AppInput :placeholder="data.styleYourSlideMilestone.inputPlaceHolder"/>
             </div>
-           <div class="rightNav__content--picture">
+           <div class="rightNav__content--picture" @click="fn('finish')">
             <AppHeaderTag :grade="'h5'" :label="data.styleYourSlideMilestone.slide.title"/>
             <div class="rightNav__content--thumbnail fav">
                 <Tooltip :content="tooltip.favorite.title" :link="true" :linkLabel="tooltip.favorite.link" arrow="right" :setStateNav="fn" :fnVal="'finish'"/>
@@ -218,8 +218,7 @@ export default {
   },
   methods:{
     style(url) {
-       return 'background: url('+url+') no-repeat ';
-            
+       return 'background: url('+url+') no-repeat ';    
      }
   },
 }

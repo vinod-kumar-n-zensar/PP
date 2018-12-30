@@ -5,19 +5,24 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    navigation:"ideas"
+    navigation:"ideas",
+    count:1
   },
   mutations: {
     updateState(state, text){
-      debugger
       state.navigation = text;
+    },
+    updateStateCount(state, text){
+      state.count = text;
     }
   },
   actions: {
     updateStateVal({commit},context){
-      debugger
       commit('updateState', context)
-    }
+    },
+    updateStateCount({commit},context){
+      commit('updateStateCount', context)
+    },
   },
   
 });

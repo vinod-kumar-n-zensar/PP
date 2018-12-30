@@ -12,7 +12,7 @@
               </div>
                 <div v-else>
                     <Tooltip v-show="state.state.navigation == 'slide1'"  :content="data.slide1.title" :link="true" :linkLabel="data.slide1.link" :arrow="'top'" :setStateNav="fn" :fnVal="'windenergy'"/>
-                    <Input  :typeText="'text'" :textValue="list.text" :class="state.state.navigation == 'windenergy' ? 'style': '' "/>
+                    <Input :keymonitorFn="fn" :fnVal="'windenergy'"  :typeText="'text'" :textValue="list.text" :class="state.state.navigation == 'windenergy' ? 'style': '' "/>
                 </div>
             </div>
           </div>

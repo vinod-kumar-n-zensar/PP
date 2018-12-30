@@ -104,9 +104,9 @@
           {
             "aria": "Undo",
             "imgSpan": false,
-            "url": "/images/sprite.png",
+            "url": "/images/EwaEdit_m2.png",
             "spanCount":true,
-            "position": "no-repeat -165px -352px"
+            "position": "no-repeat -329px -341px"
           },
           {
             "aria": "Copy",
@@ -138,9 +138,9 @@
             "label": "New Slide",
             "imgSpan": true,
             "url": "/images/sprite.png",
-            "position":"-354px -127px",
-            "width": "15px",
-            "height": "15px"
+            "position":"-395px -19px",
+            "width": "16px",
+            "height": "16px"
           },
           {
             "aria": "Layout",
@@ -231,10 +231,11 @@
           {
             "aria": "Text Highlight Color",
             "imgSpan": true,
-            "url": "/images/sprite.png",
-            "position":"-363px -379px",
+            "spanCount":true,
+            "url": "/images/EwaEdit_m2.png",
+            "position":"-381px -74px",
             "width":"16px",
-            "height":"16px"
+            "height":"15px"
           }
         ],
         "listingOps":[
@@ -379,27 +380,6 @@
         "text":"click to add subtitle"
       },
       "slide2":{
-        "label":"Lorem Ipsum ",
-        "nav":true,
-        "list":[
-          {
-            "title":"Showcase our sustainable energy"
-          },
-          {
-            "title":"Build on our environmental impact"
-          },
-          {
-            "title":"Connect with our customers"
-          },
-          {
-            "title":"Green branding should be unqiue and creative"
-          },
-          {
-            "title":"Emotional connection to sustainability is key"
-          }
-        ]
-      },
-      "slide3":{
         "label":"Goals",
         "nav":true,
         "list":[
@@ -420,7 +400,7 @@
           }
         ]
       },
-      "slide4":{
+      "slide3":{
         "label":"Milestones",
         "nav":true,
         "list":[
@@ -450,7 +430,7 @@
           }
         ]
       },
-      "slide5":{
+      "slide4":{
         "label":"Northwind, Project Update",
         "text":"click to add subtitle"
       }
@@ -791,5 +771,32 @@
     "mainSlide1":"/images/titleViewMain.png",
     "slide3":"/images/title3.png",
     "slide4":"/images/title4.png"
-  }
+  },
+  "leftNavImages":[
+    {
+      "slide1":[
+        {
+          "url":"/images/slide1main.png"
+        },
+        {
+          "url":"/images/titleViewMain.png"
+        }
+      ]
+    },
+    {
+      "slide2":{
+        "url":"/images/titleViewMain.png"
+      }
+    },
+    {
+      "slide3":{
+        "url":"/images/title3.png"
+      }
+    },
+    {
+      "slide4":{
+        "url":"/images/PPT-milestones.png"
+      }
+    }
+  ]
 }

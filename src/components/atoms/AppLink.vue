@@ -8,14 +8,14 @@
   >
     {{ label }}
   </a>
-    <a
+    <a 
     v-else-if="spanCount"
     :class="linkName"
     :href="path"
   >
     <span :style = style(url,position,width,height)></span> {{ label }} <span :style = style(url)></span>
   </a>
-     <a
+     <a @click="fn('slide1')"
     v-else-if="img"
     :class="linkName"
      :href="path"
@@ -51,7 +51,9 @@ export default {
     isNewWindow: {
       type: Boolean,
       default: false
-    }
+    },
+    fn:Function,
+    fnVal:String
   },
   methods:{
     style(url, position,width,height) {
@@ -63,7 +65,7 @@ export default {
         return 'background: url('+url+') no-repeat';
       }
         
-     }
+     },
   }
 }
 </script>

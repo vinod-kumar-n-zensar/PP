@@ -1,5 +1,5 @@
 <template>
-    <input :type="typeText" :class="input_shape" :placeholder="placeholder" :value="textValue">
+    <input :type="typeText" :class="input_shape" :placeholder="placeholder" :value="textValue" v-on:keyup="keymonitor" >
 </template>
 
 <script>
@@ -13,6 +13,13 @@ export default {
         input_shape: String,
         placeholder: String,
         textValue: String,
+        keymonitorFn:Function,
+        fnVal: String
+    },
+    methods:{
+        keymonitor(){
+            this.keymonitorFn(this.fnVal)
+        }
     }
 }
 </script>
