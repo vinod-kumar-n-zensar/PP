@@ -12,7 +12,7 @@
             <AppHeaderTag :grade="'h5'" :label="data.pictures.title"/>
             <AppParagraph :content="data.pictures.recommend"/>
             <div class="rightNav__content--thumbnail">
-                <div v-for="(data,key,index) in data.pictures.images" class="col-lg-6">
+                <div v-for="(data,key,index) in data.pictures.images">
                     <img :src="data.url" alt="">
                 </div>
             </div>
@@ -93,7 +93,10 @@
            <div class="rightNav__content--picture">
             <AppHeaderTag :grade="'h5'" :label="data.styleYourSlide.slide.title"/>
             <div class="rightNav__content--thumbnail">
-                <div v-for="(data,key,index) in data.styleYourSlide.slide.images" class="col-lg-6">
+                <div v-show="state.state.navigation == 'slide3'" v-for="(data,key,index) in data.styleYourSlide.slide.images">
+                    <img :src="data.url" alt="">
+                </div>
+                <div  v-show="state.state.navigation == 'finish'" v-for="(data,key,index) in data.styleYourSlide.slide.finishImages">
                     <img :src="data.url" alt="">
                 </div>
                 <AppLink class="more-link" :label="data.styleYourSlide.slide.more"/>
@@ -103,7 +106,7 @@
             <AppHeaderTag :grade="'h5'" :label="data.styleYourSlide.picSearch.title"/>
             <AppParagraph :content="data.styleYourSlide.picSearch.power"/>
             <div class="rightNav__content--thumbnail">
-                <div v-for="(data,key,index) in data.styleYourSlide.picSearch.images" class="col-lg-6">
+                <div v-for="(data,key,index) in data.styleYourSlide.picSearch.images">
                     <img :src="data.url" alt="">
                 </div>
             </div>
@@ -122,7 +125,7 @@
            <div class="rightNav__content--picture">
             <AppHeaderTag :grade="'h5'" :label="data.milestone.slide.title"/>
             <div class="rightNav__content--thumbnail">
-                <div v-for="(data,key,index) in data.milestone.slide.images" class="col-lg-6">
+                <div v-for="(data,key,index) in data.milestone.slide.images">
                     <img :src="data.url" alt="">
                 </div>
                 <AppLink class="more-link" :label="data.milestone.slide.more"/>
@@ -169,7 +172,7 @@
             <AppHeaderTag :grade="'h5'" :label="data.styleYourSlideMilestone.slide.title"/>
             <div class="rightNav__content--thumbnail fav">
                 <Tooltip :content="tooltip.favorite.title" :link="true" :linkLabel="tooltip.favorite.link" arrow="right" :setStateNav="fn" :fnVal="'finish'"/>
-                <div v-for="(data,key,index) in data.styleYourSlideMilestone.slide.images" class="col-lg-6">
+                <div v-for="(data,key,index) in data.styleYourSlideMilestone.slide.images" class="">
                     <img :src="data.url" alt="">
                 </div>
                 <AppLink class="more-link" :label="data.styleYourSlideMilestone.slide.more"/>
@@ -180,7 +183,7 @@
             <AppHeaderTag :grade="'h5'" :label="data.styleYourSlideMilestone.picSearch.title"/>
             <AppParagraph :content="data.styleYourSlideMilestone.picSearch.power"/>
             <div class="rightNav__content--thumbnail">
-                <div v-for="(data,key,index) in data.styleYourSlideMilestone.picSearch.images" class="col-lg-6">
+                <div v-for="(data,key,index) in data.styleYourSlideMilestone.picSearch.images">
                     <img :src="data.url" alt="">
                 </div>
             </div>

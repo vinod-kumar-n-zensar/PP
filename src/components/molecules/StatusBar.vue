@@ -75,8 +75,8 @@ export default {
    },
     render(){
         return <div class="status container-fluid">
-            <button class="status__indicator" on-click={this.handleProgress}>Play >></button>
-            <div class="status__outside col-lg-12">
+            <button class="status__indicator col-lg-1" on-click={this.handleProgress}>Play >></button>
+            <div class="status__outside col-lg-11">
             <span class="status__block active" ><hr /></span>
             <span class="status__block"><hr /></span>
             <span class="status__block"><hr /></span>
@@ -88,7 +88,7 @@ export default {
             <span class="status__block" ><hr /></span>
             <span class="status__block" ><hr /></span>
             </div>
-            <div id="outside" class="col-lg-12" on-click={this.handleStatusChange}>
+            <div id="outside" class="col-lg-11" on-click={this.handleStatusChange}>
   </div>
         </div>
     },

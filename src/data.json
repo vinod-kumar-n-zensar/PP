@@ -444,22 +444,7 @@
       "recommend":"recommended for you",
       "images":[
         {
-          "url":"/images/northwind.png"
-        },
-        {
-          "url":"/images/projectupdate.png"
-        },
-        {
-          "url":"/images/architecture.png"
-        },
-        {
-          "url":"/images/background.png"
-        },
-        {
-          "url":"/images/sunset.png"
-        },
-        {
-          "url":"/images/nature.png"
+          "url":"/images/find-template.png"
         }
       ]
     },
@@ -548,16 +533,12 @@
         "more":"More Design Ideas",
         "images":[
           {
-            "url":"/images/style1.png"
-          },
+            "url":"/images/milestone-timeline.png"
+          }
+        ],
+        "finishImages":[
           {
-            "url":"/images/style2.png"
-          },
-          {
-            "url":"/images/style3.png"
-          },
-          {
-            "url":"/images/style4.png"
+            "url":"/images/finish.png"
           }
         ]
       },
@@ -566,23 +547,9 @@
         "power":"Powered by Bing",
         "images":[
           {
-            "url":"/images/imagesearch1.png"
-          },
-          {
-            "url":"/images/imagesearch2.png"
-          },
-          {
-            "url":"/images/imagesearch3.png"
-          },
-          {
-            "url":"/images/imagesearch4.png"
-          },
-          {
-            "url":"/images/imagesearch5.png"
-          },
-          {
-            "url":"/images/imagesearch6.png"
+            "url":"/images/imageSearch.png"
           }
+         
         ]
       }
     },
@@ -595,16 +562,7 @@
         "suggestion":"This replacement suggestion is used in 4 of 8 total insatnces on this slide.",
         "images":[
           {
-            "url":"/images/milestone.png"
-          },
-          {
-            "url":"/images/milestone2.png"
-          },
-          {
-            "url":"/images/milestone3.png"
-          },
-          {
-            "url":"/images/milestone4.png"
+            "url":"/images/milestone-punctuation.png"
           }
         ]
       },
@@ -632,16 +590,7 @@
         "more":"More Design Ideas",
         "images":[
           {
-            "url":"/images/m1.png"
-          },
-          {
-            "url":"/images/m2.png"
-          },
-          {
-            "url":"/images/m3.png"
-          },
-          {
-            "url":"/images/m4.png"
+            "url":"/images/milestone-timelinee.png"
           }
         ]
       },
@@ -650,22 +599,7 @@
         "power":"Powered by Bing",
         "images":[
           {
-            "url":"/images/imagesearch1.png"
-          },
-          {
-            "url":"/images/imagesearch2.png"
-          },
-          {
-            "url":"/images/imagesearch3.png"
-          },
-          {
-            "url":"/images/imagesearch4.png"
-          },
-          {
-            "url":"/images/imagesearch5.png"
-          },
-          {
-            "url":"/images/imagesearch6.png"
+            "url":"/images/imagesearch.png"
           }
         ]
       }

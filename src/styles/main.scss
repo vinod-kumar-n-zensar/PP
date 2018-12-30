@@ -87,9 +87,14 @@ a,button{
                 @include inline-flex;
                 @include padding(all, 0 10px);
                 a{
-                    
                     @include font-size(.8rem);
                     color:$text--white;
+                }
+                &:hover{
+                    background: $bg--white;
+                    a{
+                        color: $bg--primaryheader;
+                    }  
                 }
             }
         &.left{
@@ -271,6 +276,7 @@ a,button{
 // Body -- Slide Content
 .main-view{
     @include flexbox;
+    overflow-x:hidden;
 }
 .slide{
         @include flexbox;
@@ -278,6 +284,7 @@ a,button{
         @include align-items(center);
         @include justify-content(center);
         @include flex-wrap(wrap);
+        overflow: hidden;
     &__main{
         @include font-family('Segoe UI Regular');
         @include text-align(center);
@@ -288,7 +295,7 @@ a,button{
                 width:100%;
                 @include font-family('Segoe UI Regular');
                 border:none;
-                @include font-size(3rem);
+                @include font-size(2.5rem);
                 line-height: unset;
                 @include text-align(left);
                 @include padding(all,0 74px);
@@ -310,7 +317,7 @@ a,button{
             @include margin(all,auto);
             input{
                 @include text-align(center);
-                @include font-size(2rem);
+                @include font-size(1.5rem);
                 border:none;
                 &.style{
                     @include border(all,1px,dotted,$text--grey);
@@ -319,8 +326,8 @@ a,button{
                 }
             }
             .tooltip{
-                top: 16px;
-                left: 230px;
+                top: 30%;
+                left: 28%;
                 &__indicator{
                     left: 42px;
                 }
@@ -560,12 +567,11 @@ a,button{
             @include flex-wrap(wrap);
             @include margin(top,5px);
             > div{
-                height: 50px;
                 @include padding(all,0);
                 background-size: contain !important;
                 img{
-                    height: 97%;
-                    width: 97%;
+                    height: 100%;
+                    width: 100%;
                 }
             }
             .more-link{
@@ -780,7 +786,7 @@ a,button{
             }
             &--goals-content{
                 .tooltip{
-                    top: 123px;
+                    top: 104px;
                     left: -150px;
                     &__indicator{
                         right: -23px;
@@ -905,6 +911,7 @@ a,button{
 .status{
     position: relative;
     @include flexbox;
+    overflow: hidden;
     &__indicator{
         background: transparent;
         border: none;
@@ -916,12 +923,11 @@ a,button{
         @include flexbox;
         @include align-items(center);
         position: absolute;
-        width: 77%;
         height: 20px;
         left: 102px;
         @include padding(all,0);
         span{
-            width:10%;
+            width: 9.8%;
             @include inline-flex;
             @include border(right,1px,solid,$text--grey);
             hr{
@@ -944,7 +950,6 @@ a,button{
     #outside {
         height: 20px;
         background-color: transparent;
-        max-width: 83%;
         z-index: 1;
       }
 }
