@@ -5,7 +5,7 @@
           <AppLink :fn="state.state.navigation == 'ideas' ? fn: null" :fnVal="state.state.navigation == 'ideas' ? 'slide1': ''" v-if="!list.textBox" :label="list.label" :aria-labelledby="list.aria" :img="list.imgSpan" :spanCount="list.spanCount" :url="list.url" :position="list.position" :width="list.width" :height="list.height"  />
           <Input v-if="list.textBox" :typeText="'text'" />
           <div class="presentation--tooltip" v-show="state.state.navigation == 'finish'" v-if="list.label == 'Ideas'">
-            <Tooltip :content="tooltipData.presentation.title" :link="true" :linkLabel="tooltipData.presentation.link" arrow="left" :setStateNav="fn" :fnVal="'ideas'"/>
+            <Tooltip :content="tooltipData.presentation.title" :link="true" :linkLabel="tooltipData.presentation.link" arrow="left" :setStateNav="fn" :fnVal="'finishtour'"/>
           </div>
           
            <Tooltip v-if="list.label == 'Ideas'" v-show="state.state.navigation == 'ideas'" :link="list.tooltip.link" :linkLabel="list.tooltip.linklabel" :content="list.tooltip.content" :arrow="list.tooltip.arrow" :setStateNav="fn" :fnVal="'slide1'"/>

@@ -732,5 +732,15 @@
         "url":"/images/PPT-milestones.png"
       }
     }
+  ],
+  "tourGuide":[
+    {
+      "title":"Congratulations!",
+      "buttonPrevious": "secondary cta",
+      "buttonNext":"next tour",
+      "ppGuide":{
+        "subTitle":"You've completed 1 out of 9 modern desktop tours"
+      }
+    }
   ]
 }

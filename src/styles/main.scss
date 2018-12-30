@@ -987,3 +987,42 @@ a,button{
         box-shadow: 0 0 33px 15px rgba(87, 84, 83, 0.67);
     }
 }
+
+//TOUR GUIDE
+.tour{
+    &__container{
+        @include text-align(center);
+        min-height: 538px;
+        @include flexbox;
+        @include align-items(center);
+        @include  flex-wrap(wrap);
+        h4{
+            color: $text--blue;
+            @include margin(all,5px auto);
+        }
+        button{
+            @include text-transform(uppercase);
+            @include border(all,1px,solid,$text--blue);
+            background: $bg--white;
+            color: $text--blue;
+            @include padding(all,5px);
+            @include font-size(12px);
+            @include margin(right,20px);
+            &.secondary{
+                color: $text--white;
+                background: $bg--blue;
+                :hover{
+                    color: $text--blue;
+                    background: $bg--white;
+                }
+            }
+            :hover{
+                color: $text--white;
+                background: $bg--blue;
+            }
+        }
+        .col-lg-12{
+            @include margin(bottom,5px);
+        }
+    }
+}

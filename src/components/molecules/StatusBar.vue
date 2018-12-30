@@ -68,9 +68,18 @@ export default {
             return this.$store.state.navigation // could also put a Getter here
         },
         (newValue, oldValue)=>{
+            debugger;
             this.spanEl()
                 let getFirstNum =  this.slectArr.indexOf(newValue);
-                this.stausUpdate(getFirstNum,false);
+                if(getFirstNum == -1){
+                    let spanEl = document.getElementsByClassName('status__block');
+                    for(let i=0;i<=spanEl.length-1;i++){
+                        spanEl[i].className += ' active';
+                    }
+                } else{
+                    this.stausUpdate(getFirstNum,false);
+                }
+                
         })
    },
     render(){
@@ -93,11 +102,18 @@ export default {
         </div>
     },
     mounted(){
-        
         if(localStorage.getItem('navigation')!= null){
-         this.spanEl();
-         let getFirstNum =  this.slectArr.indexOf(localStorage.getItem('navigation'));
-         this.stausUpdate(getFirstNum,false);
+            if( localStorage.getItem('navigation') == 'finishtour'){
+                let spanEl = document.getElementsByClassName('status__block');
+                    for(let i=0;i<=spanEl.length-1;i++){
+                        spanEl[i].className += ' active';
+                    }
+            } else{
+                this.spanEl();
+                let getFirstNum =  this.slectArr.indexOf(localStorage.getItem('navigation'));
+                this.stausUpdate(getFirstNum,false);
+            }
+
        }
         
     }

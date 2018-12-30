@@ -12,7 +12,7 @@ export default {
         fnVal: String
     },
     render(){
-        return <button class="shape" aria-labelledby= {this.label} on-click={this.fn.bind(this,this.fnVal)}>
+        return <button class={this.shape} aria-labelledby= {this.label} on-click={ this.fn != null && this.fnVal != undefined ? this.fn.bind(this,this.fnVal) : ''}>
         {this.label}
     </button>
     }
